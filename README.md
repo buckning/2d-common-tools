@@ -36,6 +36,28 @@ TimeDiff.HoursSince(time)
 Get the amount of minutes since a specific time
 TimeDiff.MinutesSince(time)
 
+# Screen Fader
+Attach the ScreenFader script to a UI Image GameObject. The screen fader can be tested by using the **Fade In** and **Fade Out** buttons in the inspector when the scene is running.
+To trigger a fade in or fade out from code, reference the the ScreenFader's **StartFadingIn** and **StartFadingOut** methods.
+```
+screenFader.StartFadingIn();
+screenFader.StartFadingOut();
+```
+
+To receive events when a fade in or fade out is complete, add a listener to fadeInCompleteListeners and fadeOutCompleteListeners.
+```
+screenFader.fadeInCompleteListeners += FadeInComplete;
+screenFader.fadeOutCompleteListeners += FadeOutComplete;
+
+void FadeOutComplete() {
+	print ("Fade Out Completed");
+}
+
+void FadeInComplete() {
+	print ("Fade In Completed");
+}
+```
+
 # Screen Shot Share
 Attach the ScreenShotShare script to a GameObject and set the title and bodyText properties. When a screen shot needs to be shared, call the **SaveAndShareImage** method. This saves a screenshot to a temporary file and calls the native share APIs to perform the share.
 
