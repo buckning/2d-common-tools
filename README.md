@@ -5,7 +5,9 @@ This project is a collection of useful Scripts and Classes that can be used in a
 Add the CharacterReskin script to the GameObject to be reskinned. The script will recursively look through the GameObject for SpriteRenderers and look for a suitable Sprite to assign to it depending on the GameObject's name.
 
 Example use:
+```
 character.ChangeCostume (newSkinFile);
+```
 
 The newSkinFile needs to be in the Resources directory. If newSkinFile is "normalCostume", the script will look for a file in the Resources directory like "Assets/Resources/normalCostume.png".
 
@@ -18,8 +20,10 @@ The script can be used to trigger a burst of shaking by using the following code
 objectShaker.ShakeForDuration (1.0f);
 
 The object can be triggered to start or stop shaking manually by using the **StartShaking** and **StopShaking** methods.
+```
 objectShaker.StartShaking();
 objectShaker.StopShaking();
+```
 
 Click the **Shake Object** button to use test the script when the Scene is running. 
 
@@ -28,13 +32,19 @@ Add the GameObjectRotator script to the GameObject and set the Rotation Speed pr
 
 # Time
 Get the current time
+```
 string time = TimeDiff.TimeNow();
+```
 
 Get the amount of hours since a specific time
+```
 TimeDiff.HoursSince(time)
+```
 
 Get the amount of minutes since a specific time
+```
 TimeDiff.MinutesSince(time)
+```
 
 # Screen Fader
 Attach the ScreenFader script to a UI Image GameObject. The screen fader can be tested by using the **Fade In** and **Fade Out** buttons in the inspector when the scene is running.
